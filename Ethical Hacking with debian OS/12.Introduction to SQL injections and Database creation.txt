@@ -1,0 +1,21 @@
+www.DV.cv.uk website
+cp -Rv /home/toor/Downloads/DVWA-1.0.8 /var/www/
+pwd
+chmod -Rv 777 /var/www/DVWA-1.0.8/
+apt-cache search mysql |grep -i database |less 
+apt-get install mysql-client
+apt-get install mysql-server
+service mysql start
+service mysql restart
+mysql -h localhost -u root 
+SET PASSWORD FOR root@alpha=PASSWORD('newpass');
+cd /var/www/DVWA-1.0.8/
+cd config
+nano config.inc.php 
+	Then set password field to our password
+su
+exit
+service mysql status
+service mysql start
+service apache2 restart
+

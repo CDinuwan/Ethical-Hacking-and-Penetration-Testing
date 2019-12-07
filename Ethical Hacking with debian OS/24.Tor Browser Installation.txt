@@ -1,0 +1,9 @@
+apt-get update
+apt-get install tor torbrowser-launcher
+adduser --home /home/toruser toruser
+xhost si:localuser:toruser
+sudo -u toruser -H torbrowser-launcher
+apt-get install alacarte
+alacarte
+Usual Applications > Internet and find Tor Browser and click Properties
+sudo -u toruser -H torbrowser-launcher %u

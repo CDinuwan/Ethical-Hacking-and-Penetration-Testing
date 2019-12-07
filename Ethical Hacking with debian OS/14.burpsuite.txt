@@ -1,0 +1,5 @@
+cd /var/www/cd DVWA-1.0.8
+nano readme file
+su
+burpsuite
+

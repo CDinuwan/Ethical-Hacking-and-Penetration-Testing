@@ -1,0 +1,25 @@
+nmap
+
+nslookup scanme.nmap.org
+nslookup ip_address
+nmap domain_name
+nmap -oG -192.168.1.0-255 -p 22 -vv /home/SCAN
+nmap -iL SCAN2 -vv
+
+#External nmap resourses
+
+curl ipinfo.io/74.207.244.221
+exploit database in web
+nmap.org in web
+
+nmap steps
+
+1.nmap scanme.nmap.org /nmap scanme.org -vv
+2.ifconfig
+3.nmap -oG -192.168.1.0-255 -p 22 -vv /home/SCAN
+4.ls | grep SCAN
+5.less SCAN
+6.cat SCAN | grep Up
+7.cat SCAN | grep Up |awk -F " " '{print $2}'
+8.nmap -iL SCAN2 -vv
+

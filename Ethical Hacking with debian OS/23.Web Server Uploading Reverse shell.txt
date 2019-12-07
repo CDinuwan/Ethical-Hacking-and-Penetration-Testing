@@ -1,0 +1,17 @@
+nmap -sV --script=http-php-version <target>
+php5 -v
+
+#Download pentestmonkey php reverse shell
+
+burpsuite
+
+#Goto DVWA and advace setting manual Proxy configuration Set ip address and port
+
+Then upload that. 
+
+Then access to it.
+
+ncat -v -l -p 1234
+ls
+cd/root/Desktop
+

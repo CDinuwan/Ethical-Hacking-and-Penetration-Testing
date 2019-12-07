@@ -1,0 +1,10 @@
+dnsshef
+
+dnschef --fakeip=192.168.1.102 --fakedomains=randomname.com --interface=192.168.1.102
+
+setoolkit
+
+cd/var/www
+tail -f file_name(havester)
+nslookup Linuxquestions.org
+

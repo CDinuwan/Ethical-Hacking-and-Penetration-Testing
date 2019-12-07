@@ -1,0 +1,11 @@
+cat /etc/shadow---zthe file store in passwords in Linux
+
+unshadow /etc/passwd /etc/shadow > pass
+ls
+catpass
+john
+john pass
+john --show pass
+
+
+

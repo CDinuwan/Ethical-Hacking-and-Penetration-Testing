@@ -1,0 +1,6 @@
+findmyhash --help
+Open MD5 hash genarator
+findmyhash MD5 -h (hash_no)
+findmyhash MD5 -h -g (hash No)
+ 
+
