@@ -1,0 +1,7 @@
+nbtscan -r Ip_Address_Range
+
+Create IP_Address Text File
+nbtscan -f Location/File.txt
+
+nbtscan -v Ip_Address ----- Can get Adapter Address
+			    Other Information

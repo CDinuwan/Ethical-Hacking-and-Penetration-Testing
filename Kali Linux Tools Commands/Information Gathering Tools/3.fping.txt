@@ -1,0 +1,4 @@
+ICMP protocol use to check status of hosts live or not.
+fping -a ip_address.
+fping -A ip_address or Domain_name.
+fping -e Domain_name or IP_Address.

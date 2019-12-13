@@ -1,0 +1,1 @@
+whois Domain_Name or IP_Name
