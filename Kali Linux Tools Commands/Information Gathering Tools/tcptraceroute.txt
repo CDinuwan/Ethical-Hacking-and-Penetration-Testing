@@ -1,5 +1,0 @@
-tcptraceroute ip_address
-
-tcptraceroute ip_address -p 433 -f 2
-
-tcptraceroute ip_address -f 2
